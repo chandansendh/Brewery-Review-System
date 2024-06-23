@@ -11,7 +11,7 @@ const Reviews = () => {
   const getReviews = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/review/createreview",
+        "https://brewery-server.onrender.com/api/review/createreview",
         {
           method: "GET",
           headers: { "Content-Type": "application/json" },

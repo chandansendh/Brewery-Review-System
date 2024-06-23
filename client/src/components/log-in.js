@@ -26,11 +26,14 @@ export default function LogIn(){
     e.preventDefault();
     console.log(logInData.password);
     try {
-      const responce = await fetch("http://localhost:5000/api/auth/login",{
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
-        body: JSON.stringify(logInData)
-      });
+      const responce = await fetch(
+        "https://brewery-server.onrender.com/api/auth/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(logInData),
+        }
+      );
       console.log("hii");
       const sData = await responce.json();
       if(responce.ok){

@@ -22,10 +22,10 @@ export const AuthProvider = ({children}) => {
     const userAuthentication = async()=>{
         try {
             const responce = await fetch(
-              "http://localhost:5000/api/auth/user",
+              "https://brewery-server.onrender.com/api/auth/user",
               {
                 method: "GET",
-                headers: { Authorization :`Bearer ${token}`},
+                headers: { Authorization: `Bearer ${token}` },
               }
             );
 

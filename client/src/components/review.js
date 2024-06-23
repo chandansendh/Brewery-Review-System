@@ -42,7 +42,7 @@ const Review = ()=>{
         let data = {user_id:user._id,bewery_id:id,review:input,star:star};
         try {
             const responce = await fetch(
-              "http://localhost:5000/api/review/createreview",
+              "https://brewery-server.onrender.com/api/review/createreview",
               {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

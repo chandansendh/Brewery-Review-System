@@ -25,11 +25,14 @@ export default function SignUp(){
       e.preventDefault();
       console.log(signUpData);
       try {
-        const responce = await fetch("http://localhost:5000/api/auth/register",{
-          method:"POST",
-          headers:{ "Content-Type":"application/json"},
-          body:JSON.stringify(signUpData)
-        });
+        const responce = await fetch(
+          "https://brewery-server.onrender.com/api/auth/register",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(signUpData),
+          }
+        );
         const r_msg= await responce.json();
         console.log(r_msg);
         if(responce.ok){
