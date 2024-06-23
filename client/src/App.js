@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
         {isLogIn?<Nav /> :<></>}
         <Routes>
-          <Route path="/" element={isLogIn?<LogIn />:<Home/>} />
+          <Route path="/" element={!isLogIn?<LogIn />:<Home/>} />
           <Route path="/register" element={<SignUp />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/home" element={<Home />} />
